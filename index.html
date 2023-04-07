@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/logo/logo.png">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Estilos Propios -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <title>Seven</title>
+</head>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/img/logo/logo.png" alt="Logo" width="150" height="150" class="logo d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link acrive" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nuevos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Prendas
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Ayuda</a>
+        </li>
+      </ul>
+      <li class="nav-item">
+        <a class="nav-link text-black" data-bs-toggle="modal" data-bs-target="#modal">
+          <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black">
+          <i class="bi bi-person mx-5"></i>
+        </a>
+      </li>
+    </div>
+  </div>
+</nav>
+
+<!-- Ventana del carrito -->
+<div class="container-xl">
+  <div class="modal" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="vaciarCarrito">
+            Vaciar carrito
+          </button>
+          <button type="button" id="procesarCompra" class="btn btn-primary">
+            Continuar compra
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+
+          <span>Total:</span>
+          <p class="text-center" id="precioTotal"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="conteiner">
+
+<!-- Portada -->
+<div class="portada">
+</div>
+
+<!-- Filtros -->
+<aside>
+  <div class="container-filtro">
+
+
+    <a href="">
+      <div class="container-remera">
+        <img class="img-filtro" src="./img/filtros/remera.jpg" alt="">
+      </div>
+    </a>
+    <a href="#">
+      <div class="container-pantalones">
+        <img class="img-filtro" src="./img/filtros/cargo.jpg" alt="">
+      </div>
+    </a>
+
+    <div class="container-buzos">
+      <img class="img-filtro" src="./img/filtros/hoddie.jpg" alt="">
+    </div>
+
+    <a href="#">
+      <div class="container-camperas">
+        <img class="img-filtro" src="./img/filtros/campera.jpg" alt="">
+      </div>
+    </a>
+  </div>
+</aside>
+<!-- Contendeor Productos -->
+<section class="container-productos" id="contenedor">
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+.imagen {
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.alerta {
+  font-weight: 700;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.portada {
+  width: 100%;
+  height: 600px;
+  background: url("../img/portada.jpg") no-repeat center center/cover;
+}
+
+.container-filtro {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+  padding: 20px 20px;
+  overflow: hidden;
+}
+
+.container-remera {
+  width: auto;
+  height: 400px;
+  grid-area: 1/1/2/2;
+  text-align: center;
+}
+
+.container-pantalones {
+  width: auto;
+  height: 400px;
+  grid-area: 1/2/2/3;
+}
+
+.container-buzos {
+  width: auto;
+  height: 400;
+  grid-area: 1/3/2/4;
+}
+
+.container-camperas {
+  width: auto;
+  height: 400px;
+  grid-area: 1/4/2/5;
+}
+
+.img-filtro {
+  width: 100%;
+}
+
+.img-filtro:hover {
+  scale: 1.1;
+}
+
+.container-productos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  justify-content: center;
+  gap: 20px 15px;
+  margin: 25px;
+}
+
+.porducto {
+  padding: 8px;
+}
+.porducto:hover {
+  border: 1px rgba(8, 8, 8, 0.486) solid;
+  scale: 1.1;
+  border-radius: 8px;
+}
+
+.porducto img {
+  width: 300px;
+  height: 350px;
+}
+
+.contenido_productos {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: rgb(102, 101, 101);
+}
+
+.precio {
+  font-size: 1.5625rem;
+}
+
+.btn_add {
+  background-color: rgba(0, 255, 13, 0.747);
+  padding: 0.6875rem;
+  border-radius: 6px 6px;
+  font-size: 0.875rem;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.modal-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.img-carrito {
+  width: 200px;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.5568627451);
+}
+
+.parrafo {
+  font-weight: 900;
+  font-style: italic;
+}
+
+#precioTotal {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.boton {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

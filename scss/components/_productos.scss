@@ -1,0 +1,54 @@
+@import "../utils/mixinsfunc";
+@import "../utils/variables";
+
+.container-productos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    justify-content: center;
+    gap: 20px 15px;
+    margin: 25px;
+}
+
+.porducto{
+    padding: 8px;
+
+
+&:hover{
+    border: 1px rgba(8, 8, 8, 0.486) solid;
+    scale: 1.1;
+    border-radius: 8px;
+}
+}
+
+.porducto img {
+    width: 300px;
+    height: 350px;
+}
+
+.contenido_productos {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; 
+}
+
+.title{
+    font-size: pixeles-rem(14);
+    color: rgb(102, 101, 101);
+}
+
+.precio {
+    font-size: pixeles-rem(25);
+}
+
+.btn_add{
+    background-color: rgba(0, 255, 13, 0.747);
+    padding: pixeles-rem(11);
+    border-radius: 6px 6px;
+    font-size: pixeles-rem(14);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+
+    &:hover{
+        
+    }
+}
