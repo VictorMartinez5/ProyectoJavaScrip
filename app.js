@@ -1,42 +1,16 @@
-const stockProductos = [
-  {
-    id: 1,
-    nombre: "Angel Guardian",
-    cantidad: 1,
-    precio: 8500,
-    img: "./img/remeras/angel_guardian.png",
-  },
-  {
-    id: 2,
-    nombre: "Cosmos Blanca",
-    cantidad: 1,
-    precio: 7000,
-    img: "./img/remeras/cosmos_blanca.png",
-  },
-  {
-    id: 3,
-    nombre: "Cosmos Crema",
-    cantidad: 1,
-    precio: 7000,
-    img: "./img/remeras/cosmos_crema.png",
-  },
-  {
-    id: 4,
-    nombre: "Tokyo",
-    cantidad: 1,
-    precio: 7500,
-    img: "./img/remeras/tokyo.png",
-  },
-  {
-    id: 5,
-    nombre: "Hoddie Fuck Luv",
-    cantidad: 1,
-    precio: 15000,
-    img: "./img/hoodie_fuck.png",
-  },
-];
+// Declaracion de los productos
 
-//Declaraciones de variables
+let productos = [];
+
+fetch("productos.json")
+  .then(response => response.json())
+  .then(data => {
+    productos = data;
+    mostrarProductos(productos);
+  });
+
+
+//Declaraciones y querySelectors
 
 let carrito = [];
 const contenedor = document.querySelector("#contenedor");
@@ -87,44 +61,45 @@ if (procesarCompra) {
   });
 }
 
-//Productos
+//Escritura de productos
 
-stockProductos.forEach((prod) => {
-  const { id, nombre, precio, img } = prod;
-  if (contenedor) {
-    contenedor.innerHTML +=
-    `
-    <div>
-    <div class="porducto">
-        <img src="${img}" alt="${nombre}">
-        <div class="contenido_productos">
+function mostrarProductos(productos) {
+  const contenedor = document.querySelector("#contenedor");
+  productos.forEach((prod) => {
+    const { id, nombre, precio, img } = prod;
+    if (contenedor) {
+      contenedor.innerHTML +=
+      `
+      <div>
+        <div class="porducto">
+          <img src="${img}" alt="${nombre}">
+          <div class="contenido_productos">
             <p class="title">${nombre}</p>
             <h4 class="precio">${precio}</h4>
             <button class="btn_add" onclick="agregarProducto(${id})">Añadir al Carrito</button>
+          </div>
         </div>
-    </div>
-</div>
-
-`;
+      </div>
+      `;
+    }
+  });
 }
-});
+
+//Funcion agregado de productos al carrito
 
 const agregarProducto = (id) => {
-  const existe = carrito.some(prod => prod.id === id)
+  const existe = carrito.some((prod) => prod.id === id);
 
-  if(existe){
-    const prod = carrito.map(prod => {
-      if(prod.id === id){
-        prod.cantidad++
-      }
-    })
+  if (existe) {
+    const index = carrito.findIndex((prod) => prod.id === id);
+    carrito[index].cantidad++;
   } else {
-    const item = stockProductos.find((prod) => prod.id === id)
-    carrito.push(item)
+    const item = productos.find((prod) => prod.id === id);
+    carrito.push({ ...item, cantidad: 1 });
   }
-  mostrarCarrito()
-
+  mostrarCarrito();
 };
+
 
 //Carrito 
 
@@ -173,15 +148,22 @@ const mostrarCarrito = () => {
   guardarStorage();
 };
 
+//LocalStorage
+
 function guardarStorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+
+//Eliminado de productos
 
 function eliminarProducto(id) {
   const remeraId = id;
   carrito = carrito.filter((remera) => remera.id !== remeraId);
   mostrarCarrito();
 }
+
+//Proceso del pedido
+
 function procesarPedido() {
   carrito.forEach((prod) => {
     const listaCompra = document.querySelector("#lista-compra tbody");
@@ -206,6 +188,8 @@ function procesarPedido() {
   );
 }
 
+
+
  function enviarCompra(e){
    e.preventDefault()
    const cliente = document.querySelector('#cliente').value
@@ -229,7 +213,7 @@ function procesarPedido() {
    btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
-   const templateID = 'template_qxwi0jn';
+   const templateID = 'template_p1t0j1q';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {

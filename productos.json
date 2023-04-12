@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "nombre": "Angel Guardian",
+      "cantidad": 1,
+      "precio": 8500,
+      "img": "./img/remeras/angel_guardian.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Cosmos Blanca",
+      "cantidad": 1,
+      "precio": 7000,
+      "img": "./img/remeras/cosmos_blanca.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Cosmos Crema",
+      "cantidad": 1,
+      "precio": 7000,
+      "img": "./img/remeras/cosmos_crema.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Tokyo",
+      "cantidad": 1,
+      "precio": 7500,
+      "img": "./img/remeras/tokyo.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Hoddie Fuck Luv",
+      "cantidad": 1,
+      "precio": 15000,
+      "img": "./img/hoodie_fuck.png"
+    }
+  ]
