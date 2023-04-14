@@ -10,17 +10,17 @@ fetch("productos.json")
   });
 
 
-//Declaraciones y querySelectors
+//Llamado a los id
 
 let carrito = [];
-const contenedor = document.querySelector("#contenedor");
-const carritoContenedor = document.querySelector("#carritoContenedor");
-const vaciarCarrito = document.querySelector("#vaciarCarrito");
-const precioTotal = document.querySelector("#precioTotal");
-const activarFuncion = document.querySelector("#activarFuncion");
-const procesarCompra = document.querySelector("#procesarCompra");
-const totalProceso = document.querySelector("#totalProceso");
-const formulario = document.querySelector('#procesar-pago')
+const contenedor = document.getElementById("contenedor");
+const carritoContenedor = document.getElementById("carritoContenedor");
+const vaciarCarrito = document.getElementById("vaciarCarrito");
+const precioTotal = document.getElementById("precioTotal");
+const activarFuncion = document.getElementById("activarFuncion");
+const procesarCompra = document.getElementById("procesarCompra");
+const totalProceso = document.getElementById("totalProceso");
+const formulario = document.getElementById('procesar-pago')
 
 //Funnciones del carrito 
 
