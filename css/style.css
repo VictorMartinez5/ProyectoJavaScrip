@@ -91,16 +91,16 @@ body {
   margin: 25px;
 }
 
-.porducto {
+.porduct {
   padding: 8px;
 }
-.porducto:hover {
+.porduct:hover {
   border: 1px rgba(8, 8, 8, 0.486) solid;
   scale: 1.1;
   border-radius: 8px;
 }
 
-.porducto img {
+.porduct img {
   width: 300px;
   height: 350px;
 }

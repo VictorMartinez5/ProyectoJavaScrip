@@ -64,14 +64,14 @@ if (procesarCompra) {
 //Escritura de productos
 
 function mostrarProductos(productos) {
-  const contenedor = document.querySelector("#contenedor");
+  const contenedor = document.getElementById("contenedor");
   productos.forEach((prod) => {
     const { id, nombre, precio, img } = prod;
     if (contenedor) {
       contenedor.innerHTML +=
       `
       <div>
-        <div class="porducto">
+        <div class="porduct">
           <img src="${img}" alt="${nombre}">
           <div class="contenido_productos">
             <p class="title">${nombre}</p>
